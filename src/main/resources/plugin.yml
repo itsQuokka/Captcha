@@ -1,0 +1,21 @@
+name: Captcha
+version: ${project.version}
+main: com.captcha.Plugin
+api-version: 1.13
+authors: [Quokka]
+description: Player verification Captcha.
+
+commands:
+  captcha:
+
+permissions:
+  captcha.*:
+    description: Default master permission, also enables bypass feature to skip being captcha'd.
+    children:
+      captcha.push: true
+      captcha.bypass: true
+      captcha.settimeout: true
+  captcha.push:
+    description: Default permission for issuing captches to players.
+  captcha.settimeout:
+    description: Permission required to change configuration timeout.
